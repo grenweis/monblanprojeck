@@ -15,7 +15,7 @@ body {
     font-family: Arial;
 }
 
-/* Center website */
+
 .main {
     max-width: 1000px;
     margin: auto;
@@ -30,38 +30,38 @@ h1 {
     margin: 10px -16px;
 }
 
-/* Add padding BETWEEN each column */
+
 .row,
 .row > .column {
     padding: 8px;
 }
 
-/* Create three equal columns that floats next to each other */
+
 .column {
     float: left;
     width: 33.33%;
-    display: none; /* Hide all elements by default */
+    display: none; 
 }
 
-/* Clear floats after rows */ 
+ 
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Content */
+
 .content {
     background-color: white;
     padding: 10px;
 }
 
-/* The "show" class is added to the filtered elements */
+
 .show {
   display: block;
 }
 
-/* Style the buttons */
+/* стиль для кнопок но что то пошло не так */
 .btn {
   border: none;
   outline: none;
@@ -94,38 +94,47 @@ h1 {
    }
 </style>
 <style>
-    body { background: url(logo.png);
+     body { background: url(logo3.png); 
+    background-size: 100%;
     }
+</style>
+<style>
+ 
 </style>
 </head>
 <body>
 
-<!-- MAIN (Center website) -->
+<!-- главный текст -->
 <div class="main">
 
 <p align="right"><h1 align="right">monblanprojeck</h1></p><p align="right"> <a  href="#" class="c">Start on 17-02-2016 </a></p>
-<p align="right">870 posts   11,787 followers    112 following</p>
-<p align="right"> Date <input type="date" id="week">
-    <br> <output></output>
-    <br> <output></output> </p>
+<p align="right"><b>870</b> posts   <b>11,787</b> followers    <b>112</b> following</p>
+<p align="right"> Date <input type="date" id="davaToday">
+  <script>
+  document.getElementById('davaToday').valueAsDate = new Date();
+  </script>
+     </p>
+     
     
 
 
-
+<!-- немного пришлось усложнить картинки забыл что можно использовать грид -->
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> </button>
  
 </div>
+<!-- эти же картинки -->
 
-<!-- Portfolio Gallery Grid -->
 <div class="row">
   <div class="column ">
     <div class="content">
-      <img src="1.png" alt="1" style="width:100%">
+      <img src="1.png" alt="1"  style="width:100%">
+     
       
     </div>
   </div>
+  
   <div class="column ">
     <div class="content">
     <img src="2.png" alt="2" style="width:100%">
@@ -142,6 +151,7 @@ h1 {
   <div class="column ">
     <div class="content">
       <img src="4.png" alt="4" style="width:100%">
+      
       
     </div>
   </div>
@@ -176,12 +186,13 @@ h1 {
       
     </div>
   </div>
-<!-- END GRID -->
-</div>
-
 
 </div>
 
+
+</div>
+<center><a href="#" class="c">Lern more</a></center>
+<!-- скрипт для фильтрации картинки и разположения это для поисковика если захочется фильтровать сайт -->
 <script>
     filterSelection("all")
     function filterSelection(c) {
@@ -216,7 +227,7 @@ h1 {
     }
     
     
-    // Add active class to the current button (highlight it)
+    // это на потом если что то еще придумают)
     var btnContainer = document.getElementById("myBtnContainer");
     var btns = btnContainer.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
